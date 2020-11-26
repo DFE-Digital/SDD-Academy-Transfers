@@ -1,3 +1,7 @@
 ---
 applications:
 - name: at-prototype
+  command: node start.js
+  memory: 256M
+  buildpacks:
+  - nodejs_buildpack
