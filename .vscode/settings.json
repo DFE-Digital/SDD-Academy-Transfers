@@ -1,5 +1,4 @@
 {
     "editor.foldingStrategy": "indentation",
-    "editor.formatOnSave": true,
     "editor.formatOnType": true
 }
