@@ -1,76 +1,64 @@
-{% extends "layout.html" %}
-
-{% block header %}
-{{ govukHeader({
-  homepageUrl: "/",
-  serviceName: "Transfer an academy to another trust",
-  serviceUrl: "#",
-  containerClasses: "govuk-width-container",
-  navigation: [
-  
-  ]
-}) }}
-{% endblock %}
-
-{% block pageTitle %}
-Dashboard
-{% endblock %}
-
-{% block beforeContent %}
-
-{{ govukPhaseBanner({
-  tag: {
-  text: "alpha"
-},
-html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
-}) }}
-
-
-{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block header %} {{ govukHeader({ homepageUrl:
+"/", serviceName: "Transfer an academy to another trust", serviceUrl: "#",
+containerClasses: "govuk-width-container", navigation: [ ] }) }} {% endblock %}
+{% block pageTitle %} Add academies {% endblock %} {% block beforeContent %} {{
+govukPhaseBanner({ tag: { text: "alpha" }, html: 'This is a new service - your
+<a href="#" class="govuk-link">feedback</a> will help us to improve it.' }) }}
+{% endblock %} {% block content %}
 
 <a href="trust-details.html" class="govuk-back-link">Back</a>
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        Add the transferring academies
-      </h1>
+      <h1 class="govuk-fieldset__heading">Add the transferring academies</h1>
     </legend>
     <div id="waste-hint" class="govuk-hint">
       Select all the academies that are transferring.
     </div>
     <div class="govuk-checkboxes">
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <input
+          class="govuk-checkboxes__input"
+          id="waste"
+          name="waste"
+          type="checkbox"
+          value="carcasses"
+        />
         <label class="govuk-label govuk-checkboxes__label" for="waste">
           St John Rigby Catholic Primary School (URN 139515)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <input
+          class="govuk-checkboxes__input"
+          id="waste-2"
+          name="waste"
+          type="checkbox"
+          value="mines"
+        />
         <label class="govuk-label govuk-checkboxes__label" for="waste-2">
           St Thomas More Catholic Primary School (URN 139517)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <input
+          class="govuk-checkboxes__input"
+          id="waste-3"
+          name="waste"
+          type="checkbox"
+          value="farm"
+        />
         <label class="govuk-label govuk-checkboxes__label" for="waste-3">
           St Mary's Catholic Primary School (URN 142738)
         </label>
       </div>
     </div>
-
   </fieldset>
 </div>
 
-
-  <a href="identified.html" role="button" draggable="false" class="govuk-button">
-      Save and continue
-  </a> 
-
-
+<a href="identified.html" role="button" draggable="false" class="govuk-button">
+  Save and continue
+</a>
 
 {% endblock %}
