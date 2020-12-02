@@ -1,0 +1,623 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: "Transfer an academy to another trust",
+  serviceUrl: "#",
+  containerClasses: "govuk-width-container",
+  navigation: [
+  
+  ]
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Transfer
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+  text: "alpha"
+},
+html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="dashboard.html">All academies</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="dashboard.html">Our Lady Immaculate Catholic Academies Trust</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="trust-name.html">Features of the transfert</a>
+    </ol>
+</div>
+
+<main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">Features of the transfer</h1>
+
+            <p class="govuk-body-l"><strong>Outgoing trust:</strong>Our Lady Immaculate Catholic Academies Trust</p>
+
+<!-- Prepop radios section -->
+
+            <fieldset class="govuk-fieldset" aria-describedby="initiated-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h2 class="govuk-fieldset__heading">
+                        Who initiated the academy transfer?
+                    </h2>
+                </legend>
+
+                <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="initiated" name="initiated" type="radio" value="DfE"
+                            checked />
+                        <label class="govuk-label govuk-radios__label" for="initiated">
+                            Department for Education
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="initiated-2" name="changed-name" type="radio"
+                            value="Ot" />
+                        <label class="govuk-label govuk-radios__label" for="initiated-2">
+                            Outgoing Trust
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <hr class="govuk-grid-two-thirds govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+            </hr>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="intervention-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">
+                            Is the academy or trust subject to RDD or RSC intervention?
+                        </h2>
+                    </legend>
+
+                    <div class="govuk-radios govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="intervention" name="intervention" type="radio"
+                                value="yes" checked />
+                            <label class="govuk-label govuk-radios__label" for="intervention">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="intervention-2" name="intervention" type="radio"
+                                value="no" />
+                            <label class="govuk-label govuk-radios__label" for="intervention-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+<!-- Subsection section -->
+
+        <div class="govuk-grid-column-one-third">
+
+            <aside class="app-related-items" role="complementary">
+                <h2 class="govuk-heading-s" id="subsection-title">
+                    Transfer project: AT2345678
+                </h2>
+                <h4 class="govuk-body"><strong>
+                Outgoing trust name</strong>
+                </h4>
+
+                <nav role="navigation" aria-labelledby="subsection-title">
+                    <ul class="govuk-list govuk-!-font-size-16">
+                        <li>
+                            <a class="govuk-link" href="#">
+                                Our Lady Immaculate Catholic Academies trust
+                            </a>
+                        </li>
+                <h4 class="govuk-body"><strong>
+                Academy(ies) transfering</strong>
+                </h4>
+
+                <nav role="navigation" aria-labelledby="subsection-title">
+                    <ul class="govuk-list govuk-!-font-size-16">
+                        <li>
+                            <a class="govuk-link" href="#">
+                                St Mary's Catholic Primary
+                            </a>
+                        </li>
+                <h4 class="govuk-body"><strong>
+                Local Authority: </strong> Northamptonshire
+                </h4>
+                <h4 class="govuk-body"><strong>
+                School type: </strong> Academy converter
+                </h4>
+                <h4 class="govuk-body"><strong>
+                Faith school: </strong> Roman Catholic
+                </h4>
+                <h4 class="govuk-body"><strong>
+                Ofsted rating: </strong> Good
+                </h4>
+                <h4 class="govuk-body"><strong>
+                PFI: </strong> Not applicable
+                </h4>
+
+                
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+
+
+<!-- RDD/RSC intervention section -->
+
+        <div class="govuk-inset-text">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-two-thirds">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+                                What are the reasons for RDD or RSC intervention?
+                            </h1>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                            Select all that apply.
+                        </div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                    value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                    Termination warning notice
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                    value="mines">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                    RSC minded to terminate notice
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                    value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    Ofsted inadequate rating
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                    value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    More reasons to be added later
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                    value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    More reasons to be added later
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                </div>
+
+            </div>
+             <br>
+            <div id="more-detail-hint" class="govuk-hint">
+                Give more information about the intention and reasons for RDD or RSC intervention if neccessary.
+            </div>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"
+                aria-describedby="more-detail-hint"></textarea>
+       </div>
+
+ <hr class="govuk-grid-two-thirds govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+            </hr>
+
+
+<!-- ESFA intervention section -->
+
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="esfa-intervention-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">
+                            Is the academy or trust subject to ESFA intervention?
+                        </h2>
+                    </legend>
+
+                    <div class="govuk-radios govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="esfa-intervention" name="esfa-intervention" type="radio"
+                                value="yes" checked />
+                            <label class="govuk-label govuk-radios__label" for="esfa-intervention">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="esfa-intervention-2" name="esfa-intervention-2" type="radio"
+                                value="no" />
+                            <label class="govuk-label govuk-radios__label" for="esfa-intervention-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        
+
+
+
+        <div class="govuk-inset-text">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-two-thirds">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+                                What are the reasons for ESFA intervention?
+                            </h1>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                            Select all that apply.
+                        </div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                    value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                    Governance concerns
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                    value="mines">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                    Finance concerns
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                    value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    Irregularity concerns
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                    value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    Safeguarding concerns
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                    value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    More concerns to be added later
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                </div>
+                
+            </div>
+             <br>
+            <div id="more-detail-hint" class="govuk-hint">
+                Give more information about the intention and reasons for ESFA intervention if neccessary.
+            </div>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"
+                aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+    <hr class="govuk-grid-two-thirds govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+            </hr>
+
+<!-- Dates -->
+
+ 
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+       Add the date the transfer was first discussed with the outgoing trust
+      </h1>
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 12 11 2007
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+  </fieldset>
+
+   <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+       Add the potential HTB date
+      </h1>
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 12 11 2007
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+  </fieldset>
+
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+       Add the target date for the transfer 
+      </h1>
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 12 11 2007
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+  </fieldset>
+
+  <hr class="govuk-grid-two-thirds govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+            </hr>
+
+
+</div>
+
+
+<!-- Intervention Benefits section -->
+
+        <div class="govuk-inset-text">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-two-thirds">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+                                What are the benefits the transfer intended to bring?
+                            </h1>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                            Select all that apply.
+                        </div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                    value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                    Strengthening governance 
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                    value="mines">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                    Improving safeguarding
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                    value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    Stronger leadership
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                    value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    Securing financial recovery
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                    value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    Improving Ofsted rating
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                    value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    A central financial team and central support
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                </div>
+                
+            </div>
+            <br>
+            <div id="more-detail-hint" class="govuk-hint">
+                Add another benefit
+            </div>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="1"
+                aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+    <!--  Other factors -->
+
+
+        <hr class="govuk-grid-two-thirds govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+            </hr>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="criteria-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">
+                            Does this transfer meet the eligibility criteria for funding?
+                        </h2>
+                    </legend>
+
+                    <div class="govuk-radios govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="criteria" name="criteria" type="radio"
+                                value="yes" checked />
+                            <label class="govuk-label govuk-radios__label" for="criteria">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="criteria-2" name="criteria" type="radio"
+                                value="no" />
+                            <label class="govuk-label govuk-radios__label" for="criteria-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+            </div>
+
+        <hr class="govuk-grid-two-thirds govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+            </hr>        
+
+    
+
+    <!-- Intervention Benefits section -->
+
+        
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+                                Are there any other factors to consider during this transfer?
+                            </h1>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                            Select all that apply.
+                        </div>
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                    value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                    This is a high profile transfer (ministers and media could be involved)
+                                </label>
+                            </div>
+                        <div class="govuk-inset-text">
+                        <div id="account-number-hint" class="govuk-hint">
+                            Specify this concern further
+                        </div>
+                        <input class="govuk-input" id="event-name" name="event-name" type="text"></div>
+                        </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                    value="mines">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                    There are complex land and building issues
+                                </label>
+                            </div>
+                        <div class="govuk-inset-text">
+                        <div id="account-number-hint" class="govuk-hint">
+                            Specify this concern further
+                        </div>
+                        <input class="govuk-input" id="event-name" name="event-name" type="text"></div>
+                        </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                    value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    There are finance and debt concerns
+                                </label>
+                            </div>
+                        <div class="govuk-inset-text">
+                        <div id="account-number-hint" class="govuk-hint">
+                            Specify this concern further
+                        </div>
+                        <input class="govuk-input" id="event-name" name="event-name" type="text"></div>
+                        </div>
+                            
+                    </fieldset>
+ 
+
+</main>
+
+<!-- Green Button  -->
+
+<a href="dashboard.html" role="button" draggable="false" class="govuk-button govuk-button--start">
+    Save and continue
+</a>
+</div>
+
+
+</body>
+
+{% endblock %}
