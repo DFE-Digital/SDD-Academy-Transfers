@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: "Transfer an academy to another trust",
+  serviceUrl: "#",
+  containerClasses: "govuk-width-container",
+  navigation: [
+  
+  ]
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Incoming
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+  text: "alpha"
+},
+html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard.htm">Dashboard</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard.htm">Academy transfer projects</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Add new project</a>
+    </li>
+  </ol>
+</div>
+
+<div class="govuk-width-container"><br>
+  <h1 class="govuk-heading-xl">Add the incoming trust name</h1>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-body" for="autocomplete-default">
+        Search by name, trust reference number or companies house number
+      </label>
+      <input class="govuk-input autocomplete-wrapper" id="tt-default"> </input>
+    </div>
+  </div>
+</div>
+
+<a href="summary.html" role="button" draggable="false" class="govuk-button">
+  Search
+</a>
+
+{% endblock %}
