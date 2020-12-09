@@ -20,18 +20,17 @@ Incoming
 <script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
 <script type="text/javascript">
 import accessibleAutocomplete from 'accessible-autocomplete'
-var countries = [
+const countries = [
   'France',
   'Germany',
   'United Kingdom'
 ]
 accessibleAutocomplete({
-  element: document.querySelector('#tt-default'),
-  id: 'tt-default', // To match it to the existing <label>.
+  element: document.querySelector('#my-autocomplete-container'),
+  id: 'my-autocomplete', // To match it to the existing <label>.
   source: countries
 })
 </script>
-
 {% endblock %}
 
 {% block beforeContent %}
@@ -67,10 +66,10 @@ html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-half">
     <div class="govuk-form-group">
-      <label class="govuk-body" for="autocomplete-default">
+      <label class="govuk-body" for="my-autocomplete">
         Search by name, trust reference number or companies house number
       </label>
-      <input class="govuk-input autocomplete-wrapper" id="tt-default"> </input>
+      <input class="govuk-input autocomplete-wrapper" id="my-autocomplete"> </input>
     </div>
   </div>
 </div>
