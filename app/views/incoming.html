@@ -16,6 +16,24 @@
 Incoming
 {% endblock %}
 
+{% block pageScripts %}
+<script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+<script type="text/javascript">
+import accessibleAutocomplete from 'accessible-autocomplete'
+var countries = [
+  'France',
+  'Germany',
+  'United Kingdom'
+]
+accessibleAutocomplete({
+  element: document.querySelector('#tt-default'),
+  id: 'tt-default', // To match it to the existing <label>.
+  source: countries
+})
+</script>
+
+{% endblock %}
+
 {% block beforeContent %}
 
 {{ govukPhaseBanner({
@@ -25,8 +43,6 @@ Incoming
 html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
 }) }}
 
-
-
 {% endblock %}
 
 {% block content %}
@@ -34,10 +50,10 @@ html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> 
 <div class="govuk-breadcrumbs ">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="dashboard.htm">Dashboard</a>
+      <a class="govuk-breadcrumbs__link" href="dashboard.html">Dashboard</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="dashboard.htm">Academy transfer projects</a>
+      <a class="govuk-breadcrumbs__link" href="dashboard.html">Academy transfer projects</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="#">Add new project</a>
