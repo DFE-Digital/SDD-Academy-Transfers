@@ -48,7 +48,7 @@ html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> 
   <h1 class="govuk-heading-xl">Add the incoming trust name</h1>
 </div>
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
+  <div class="govuk-grid-column-two-thirds">
     <label class="govuk-body govuk-hint" for="my-autocomplete">Search by name, trust reference number or companies house
       number</label>
     <div id="my-autocomplete-container"></div>
@@ -67,9 +67,21 @@ html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> 
 <link rel="stylesheet" href="/public/stylesheets/accessible-autocomplete.min.css" />
 <script>
   const countries = [
-    'St John Rigby Catholic Primary School (URN 139515)',
-    'St Thomas More Catholic Primary School (URN 139517)',
-    'St Marys Catholic Primary School (URN 142738)'
+    'ALMA PRIMARY, TR00054, 07958546',
+    'ABBEY COLLEGE, RAMSEY, TR00001, 07740516',
+    'FOUR CS MAT, TR00088, 07333133)',
+    'ALSAGER MULTI ACADEMY TRUST, TR00057, 08597784',
+    'ABBOTS HALL PRIMARY ACADEMY, TR00004, 08484553',
+    'THE ARTHUR TERRY LEARNING PARTNERSHIP, TR00089, 07730920',
+    'EDUCATION PARTNERSHIP TRUST, TR00059, 07950891',
+    'ABBEY MULTI ACADEMY TRUST, TR00002, 07705552',
+    'SOUTH MANCHESTER LEARNING TRUST, TR00060, 08137701',
+    'THE HAMBLIN EDUCATION TRUST, TR00061, 07484717',
+    'WIGSTON ACADEMIES TRUST, TR00006, 07975551',
+    'THE ASPIRE EDUCATIONAL TRUST, TR00094, 08689696',
+    'ANGLO EUROPEAN ACADEMY TRUST, TR00067, 07846848',
+    'ASHBY SCHOOL, TR00096, 08126868',
+    'ANSFORD ACADEMY TRUST, TR00069, 07657806'
   ]
   accessibleAutocomplete({
     element: document.querySelector('#my-autocomplete-container'),
