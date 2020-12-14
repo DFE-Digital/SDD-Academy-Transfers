@@ -1,14 +1,41 @@
-{% extends "layout.html" %} {% block header %} {{ govukHeader({ homepageUrl:
-"/", serviceName: "Transfer an academy to another trust", serviceUrl: "#",
-containerClasses: "govuk-width-container", navigation: [ ] }) }} {% endblock %}
-{% block pageTitle %} Identification {% endblock %} {% block beforeContent %}
-{{govukPhaseBanner({ tag: { text: "alpha" }, html: 'This is a new service - your
-<a href="#" class="govuk-link">feedback</a> will help us to improve it.' }) }}
-{% endblock %} {% block content %}
+{% extends "layout.html" %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: "Transfer an academy to another trust",
+  serviceUrl: "#",
+  containerClasses: "govuk-width-container",
+  navigation: [
+  
+  ]
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Incoming
+{% endblock %}
+
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+  text: "alpha"
+},
+html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
 
 <a href="add-academies.html" class="govuk-back-link">Back</a>
 
 <div class="govuk-form-group">
+
+ <form action="/incoming" method="post" class="form">
+
   <fieldset class="govuk-fieldset" aria-describedby="identified-name-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
@@ -16,25 +43,25 @@ containerClasses: "govuk-width-container", navigation: [ ] }) }} {% endblock %}
       </h1>
     </legend>
 
+
     <div class="govuk-radios govuk-radios--inline">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="identified-name" name="identified-name" type="radio" value="yes" />
-        <label class="govuk-label govuk-radios__label" for="identified-name">
+        <input class="govuk-radios__input" id="identified-yes" name="identified" type="radio" value="yes" />
+        <label class="govuk-label govuk-radios__label" for="identified-yes">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="identified-name-2" name="identified-name-2" type="radio" value="no" />
-        <label class="govuk-label govuk-radios__label" for="identified-name-2">
+        <input class="govuk-radios__input" id="identified-no" name="identified" type="radio" value="no" />
+        <label class="govuk-label govuk-radios__label" for="identified-no">
           No
         </label>
       </div>
     </div>
   </fieldset>
+
 </div>
 
-<a href="summary.html" role="button" draggable="false" class="govuk-button">
-  Save and continue
-</a>
-
+ <button class="govuk-button" data-module="govuk-button">Continue</button>
+  </form>
 {% endblock %}
