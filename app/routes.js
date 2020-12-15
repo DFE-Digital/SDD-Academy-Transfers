@@ -3,6 +3,11 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
+// Passing data into a page
+router.get('/add-academies', function (req, res) {
+  res.render('add-academies', { name: 'Foo' })
+})
+
 // Branching
 router.post('/incoming', function (req, res) {
   // Get the answer from session data
