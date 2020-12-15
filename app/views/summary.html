@@ -1,10 +1,36 @@
-{% extends "layout.html" %} {% block header %} {{ govukHeader({ homepageUrl:
-"/", serviceName: "Transfer an academy to another trust", serviceUrl: "#",
-containerClasses: "govuk-width-container", navigation: [ ] }) }} {% endblock %}
-{% block pageTitle %} Summary {% endblock %} {% block beforeContent %} {{
-govukPhaseBanner({ tag: { text: "alpha" }, html: 'This is a new service - your
-<a href="#" class="govuk-link">feedback</a> will help us to improve it.' }) }}
-{% endblock %} {% block content %}
+{% extends "layout.html" %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: "Transfer an academy to another trust",
+  serviceUrl: "#",
+  containerClasses: "govuk-width-container",
+  navigation: [
+  
+  ]
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Search
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+  text: "alpha"
+},
+html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+
+
+{% endblock %}
+
+
+{% block content %}
 
 <a href="identified.html" class="govuk-back-link">Back</a>
 
@@ -25,7 +51,7 @@ govukPhaseBanner({ tag: { text: "alpha" }, html: 'This is a new service - your
       Our Lady Immaculate Catholic Academies Trust Ltd
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">
+      <a class="govuk-link" href="trust-name.html">
         Change<span class="govuk-visually-hidden"> name</span>
       </a>
     </dd>
@@ -48,7 +74,7 @@ govukPhaseBanner({ tag: { text: "alpha" }, html: 'This is a new service - your
     <dt class="govuk-summary-list__key">Name</dt>
     <dd class="govuk-summary-list__value">St Mary's Catholic Primary School</dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">
+      <a class="govuk-link" href="add-academies.html">
         Change<span class="govuk-visually-hidden"> name</span>
       </a>
     </dd>
