@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: "Transfer an academy to another trust",
+  serviceUrl: "#",
+  containerClasses: "govuk-width-container",
+  navigation: [
+  
+  ]
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+4.Incoming trust tasks
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+  text: "alpha"
+},
+html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+  
+    <div class="govuk-grid-column-full-width">
+      <img src="/public/images/12.jpg" alt="screenshot">
+    </div>
+
+</main>
+
+<!-- actual code for the screenshot above, not complete 
+
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard.html">All academy transfers</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard.html">Our Lady Immaculate Catholic Academies Trust</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="task-list.html">Transfer task list</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Matching incoming trust(s)</a>
+    </li>
+  </ol>
+</div>
+
+<main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">4. Tasks relating to matching incoming trust(s)</h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <p class="govuk-body-l">Please select possible trust candidates. <a class="govuk-link" href"#">View sponsor matching
+        guidance.</a></p>
+  </div>
+
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Preffered trust
+    </h2>
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        Byron Wood academy trust
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#past-week">
+          No More trust
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#past-month">
+          Add more trusts
+        </a>
+      </li>
+    </ul>
+    <div class="govuk-tabs__panel" id="past-day">
+      <h2 class="govuk-heading-l">Viability checks</h2>
+
+      <div id="waste-hint" class="govuk-hint">
+        Viability Checks mean lorem ipsum dolor a met.
+      </div>
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            Collect information gathering exercise from trust
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Carry out viability assessment of trust
+          </label>
+        </div>
+        <div class="govuk-inset-text">
+          <div id="event-name-hint" class="govuk-hint">
+            Add your own task
+          </div>
+          <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+        </div>
+        
+-->
+
+        {% endblock %}
