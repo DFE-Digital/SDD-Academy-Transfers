@@ -31,10 +31,22 @@ html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> 
 
 {% block content %}
 
-<a href="trust-details.html" class="govuk-back-link">Back</a>
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="dashboard.html">Dashboard</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="trust-name.html">Outgoing trust details</a>
+    </li>
+     <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Add the transferring academies</a>
+    </li>
+  </ol>
+</div>
 
+<div class="govuk-width-container"><br>
 <div class="govuk-form-group">
-
   <form action="/add-academies" method="post" class="form">
 
 
@@ -68,9 +80,10 @@ html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> 
         </div>
       </div>
     </fieldset>
+  </div> 
 </div>
 
-<a href="identified.html" role="button" draggable="false" class="govuk-button">
+<a href="incoming.html" role="button" draggable="false" class="govuk-button">
   Save and continue
 </a>
 
